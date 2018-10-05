@@ -4,9 +4,11 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
 
 class ExampleTest extends TestCase
 {
+    use RefreshDatabase;
     /**
      * A basic test example.
      *
@@ -22,9 +24,9 @@ class ExampleTest extends TestCase
     /** @test */
     public function about_route()
     {
-        $response = $this->get('/about');
+        $response = $this->get('/');
 
-        $response->assertSee('about');
+        $response->assertSee('login');
     }
 
     /** @test */
@@ -33,5 +35,8 @@ class ExampleTest extends TestCase
         $response = $this->get('/');
 
         $response->assertSeeInOrder(['Laravel','Documentation']);
+        //$response->visit(['login']);
+
     }
+
 }
