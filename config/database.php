@@ -50,6 +50,10 @@ return [
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+            'prefix_indexes' => true,
+>>>>>>> Test email first commit
             'strict' => true,
             'engine' => null,
         ],
@@ -63,6 +67,10 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+            'prefix_indexes' => true,
+>>>>>>> Test email first commit
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
@@ -76,6 +84,10 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+            'prefix_indexes' => true,
+>>>>>>> Test email first commit
         ],
 
     ],

@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+use Illuminate\Support\Str;
+
+>>>>>>> Test email first commit
 return [
 
     /*
@@ -86,9 +91,13 @@ return [
     |
     */
 
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
     'prefix' => env(
         'CACHE_PREFIX',
         str_slug(env('APP_NAME', 'laravel'), '_').'_cache'
     ),
+=======
+    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache'),
+>>>>>>> Test email first commit
 
 ];

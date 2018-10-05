@@ -12,7 +12,11 @@
 */
 
 $app = new Illuminate\Foundation\Application(
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
     realpath(__DIR__.'/../')
+=======
+    dirname(__DIR__)
+>>>>>>> Test email first commit
 );
 
 /*

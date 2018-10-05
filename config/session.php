@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+use Illuminate\Support\Str;
+
+>>>>>>> Test email first commit
 return [
 
     /*
@@ -124,7 +129,11 @@ return [
 
     'cookie' => env(
         'SESSION_COOKIE',
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
         str_slug(env('APP_NAME', 'laravel'), '_').'_session'
+=======
+        Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
+>>>>>>> Test email first commit
     ),
 
     /*

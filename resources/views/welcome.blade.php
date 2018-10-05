@@ -1,8 +1,14 @@
 <!doctype html>
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+=======
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+>>>>>>> Test email first commit
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
@@ -72,7 +78,14 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
                         <a href="{{ route('register') }}">Register</a>
+=======
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+>>>>>>> Test email first commit
                     @endauth
                 </div>
             @endif

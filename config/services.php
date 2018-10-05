@@ -17,6 +17,10 @@ return [
     'mailgun' => [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+>>>>>>> Test email first commit
     ],
 
     'ses' => [

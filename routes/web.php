@@ -15,9 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
 Route::get('/about', function () {
     return 'about';
 });
 
 
 Route::get('/accessor', 'AccessorController@index');
+=======
+Auth::routes();
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+ 
+>>>>>>> Test email first commit

@@ -1,6 +1,10 @@
 <?php
 
 use Monolog\Handler\StreamHandler;
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+use Monolog\Handler\SyslogUdpHandler;
+>>>>>>> Test email first commit
 
 return [
 
@@ -35,7 +39,11 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
             'channels' => ['single'],
+=======
+            'channels' => ['daily'],
+>>>>>>> Test email first commit
         ],
 
         'single' => [
@@ -48,7 +56,11 @@ return [
             'driver' => 'daily',
             'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
             'days' => 7,
+=======
+            'days' => 14,
+>>>>>>> Test email first commit
         ],
 
         'slack' => [
@@ -59,6 +71,19 @@ return [
             'level' => 'critical',
         ],
 
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
+=======
+        'papertrail' => [
+            'driver'  => 'monolog',
+            'level' => 'debug',
+            'handler' => SyslogUdpHandler::class,
+            'handler_with' => [
+                'host' => env('PAPERTRAIL_URL'),
+                'port' => env('PAPERTRAIL_PORT'),
+            ],
+        ],
+
+>>>>>>> Test email first commit
         'stderr' => [
             'driver' => 'monolog',
             'handler' => StreamHandler::class,

@@ -13,7 +13,12 @@ return [
     |
     */
 
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
     'previous' => '« Previous',
     'next' => 'Next »',
+=======
+    'previous' => '&laquo; Previous',
+    'next' => 'Next &raquo;',
+>>>>>>> Test email first commit
 
 ];

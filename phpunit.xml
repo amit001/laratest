@@ -27,7 +27,11 @@
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
         <env name="QUEUE_DRIVER" value="sync"/>
+=======
+        <env name="QUEUE_CONNECTION" value="sync"/>
+>>>>>>> Test email first commit
         <env name="MAIL_DRIVER" value="array"/>
     </php>
 </phpunit>

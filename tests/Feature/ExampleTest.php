@@ -18,6 +18,7 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+<<<<<<< 271cacc194c00a887a3b9c83e6191f39bfee0f08
 
     /** @test */
     public function about_route()
@@ -34,4 +35,6 @@ class ExampleTest extends TestCase
 
         $response->assertSeeInOrder(['Laravel','Documentation']);
     }
+=======
+>>>>>>> Test email first commit
 }
