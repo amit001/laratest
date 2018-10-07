@@ -15,17 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return 'about destorted';
-});
-
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Auth::routes();
 
 Auth::routes(['verify' => true]);
 
-Route::get('/post/{post}', 'PostController@show')->name('post.show');
 
-Route::get('/video/{video}', 'VideoController@show')->name('video.show');
 
-Route::resource('/shares', 'ShareController');
+ 

@@ -3,17 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
+    protected $users;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $users)
     {
-        //$this->middleware('auth', 'verified');
+        $this->middleware(['auth', 'verified']);
+
+        $this->users = $users;
     }
 
     /**
@@ -23,6 +28,12 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $users = $this->users->get();
+
+        foreach ($users as $key => $user) {
+            dd($user->nodes);
+        }
+        
         return view('home');
     }
 }
