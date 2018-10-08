@@ -31,7 +31,7 @@ class HomeController extends Controller
         $users = $this->users->get();
 
         foreach ($users as $key => $user) {
-            dd($user->nodes);
+            dd($user->nodes->ipAddress);
         }
         
         return view('home');
