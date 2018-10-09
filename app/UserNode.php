@@ -12,4 +12,9 @@ class UserNode extends Model
     {
         return $this->hasMany('App\IpAddress', 'usernode_id', 'id');
     }
+
+    public function sockets()
+    {
+        return $this->hasMany('App\Socket', 'node_id', 'id');
+    }
 }
