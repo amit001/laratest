@@ -8,6 +8,8 @@ class UserNode extends Model
 {
     protected $table = 'user_node';
 
+    protected $guarded =['id'];
+
     public function ipAddress()
     {
         return $this->hasMany('App\IpAddress', 'usernode_id', 'id');

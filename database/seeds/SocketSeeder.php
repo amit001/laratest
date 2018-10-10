@@ -15,8 +15,9 @@ class SocketSeeder extends Seeder
         ->create()
         ->each(function ($u) {
 	        $u->nodes()->save(factory(App\UserNode::class)->make())
-	        ->each(function ($ip){
-	        	$ip->sockets()->save(factory(App\Socket::class, rand(1,8))->make());
+	        ->create()
+	        ->each(function ($ip) use (&$u) {
+	        	$ip->sockets()->saveMany(factory(App\Socket::class, rand(1,8))->make());
 	        });
 	        
 	    });
